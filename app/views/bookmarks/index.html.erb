@@ -5,7 +5,6 @@
     <tr>
       <th>Title</th>
       <th>Url</th>
-      <th>Description</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,7 +14,6 @@
       <tr>
         <td><%= bookmark.title %></td>
         <td><%= link_to bookmark.url, bookmark.url %></td>
-        <td><%= bookmark.description %></td>
         <td><%= link_to 'Show', bookmark %></td>
         <td><%= link_to 'Edit', edit_bookmark_path(bookmark) %></td>
         <td><%= link_to 'Destroy', bookmark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
