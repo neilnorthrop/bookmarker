@@ -15,7 +15,7 @@ f.readlines.each do |line|
 
   bookmark.title = title_match.gsub("\">", "").gsub("<", "")
 
-  bookmark.url = url_match.split(" ").reverse.pop
+  bookmark.url = url_match.split(" ").reverse.pop.to_s.gsub("\"", "")
 
   if bookmark.url == "" || bookmark.title == ""
     puts "EMPTY"
