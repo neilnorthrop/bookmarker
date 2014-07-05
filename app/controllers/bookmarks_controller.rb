@@ -5,6 +5,7 @@ class BookmarksController < ApplicationController
   # GET /bookmarks.json
   def index
     @bookmarks = Bookmark.all
+    expires_in 3.minutes, :public => true
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render xml: @bookmarks}
